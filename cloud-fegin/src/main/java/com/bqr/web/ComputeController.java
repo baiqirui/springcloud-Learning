@@ -40,7 +40,7 @@ public class ComputeController
     public Integer add(@ApiParam("加数A") @RequestParam(value = "a") Integer a,
         @ApiParam("加数B") @RequestParam(value = "b") Integer b)
     {
-        Integer a1 = computeClient.getA(a);
+        Integer a1 = computeClient.getA(a, "1234567899");
 //        Integer b1 = computeClient2.getB(b);
 //        logger.info("getA === " + a1 + "------------ getB ===" + b1);
 //        computeClient.add(a1, b1);

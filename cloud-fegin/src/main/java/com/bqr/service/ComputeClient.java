@@ -1,6 +1,7 @@
 package com.bqr.service;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,5 +13,5 @@ public interface ComputeClient
     Integer add(@RequestParam(value = "a") Integer a, @RequestParam(value = "b") Integer b);
     
     @RequestMapping(method = RequestMethod.GET, value = "/getA")
-    Integer getA(@RequestParam(value = "a") Integer a);
+    Integer getA(@RequestParam(value = "a") Integer a, @RequestHeader("sessionId") String sessionId);
 }

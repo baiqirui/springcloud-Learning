@@ -21,7 +21,7 @@ public class ComputeClientHystrix2 implements ComputeClient2
     }
 
     @Override
-    public Integer getB(Integer b)
+    public Integer getB(Integer b, String sessionId)
     {
         return 0;
     }

@@ -31,8 +31,9 @@ public class ComputeController
     }
     
     @RequestMapping(value = "/getA", method = RequestMethod.GET)
-    public Integer getA(@RequestParam Integer a)
+    public Integer getA(@RequestParam Integer a, HttpServletRequest request)
     {
+        System.out.println(request.getHeader("sessionId"));
         ServiceInstance instance = client.getLocalServiceInstance();
         Integer r = a * 10;
         logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);

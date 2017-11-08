@@ -21,8 +21,8 @@ public class ComputeClientHystrix implements ComputeClient
     }
 
     @Override
-    public Integer getA(Integer a)
-    {
-        return 0;
+    public Integer getA(Integer a, String sessionId) {
+        return null;
     }
+
 }
